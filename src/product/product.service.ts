@@ -9,7 +9,7 @@ export class ProductService {
 
   async search(query: string) {
     return this.Product.find({
-      productTitle: { $regex: query },
+      productTitle: { $regex: query, $options: 'i' },
     });
   }
 
