@@ -13,9 +13,9 @@ export class ProductService {
     });
   }
 
-  async details(title: string) {
+  async details(id: string) {
     return this.Product.findOne({
-      productTitle: title,
+      _id: id,
     });
   }
 }
